@@ -1,0 +1,46 @@
+:root {
+ /* --br:0deg; */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+#app {
+  height: 100%;
+}
+@property --r {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+.btn1 {
+  background: conic-gradient(from var(--r), #222 0%, #eee 10%, #222 20%);
+  animation: rotating 3s linear infinite;
+}
+
+ @keyframes rotating {
+   0% {
+     --r: 0deg;
+   }
+
+   100% {
+     --r: 360deg;
+   }
+ }
